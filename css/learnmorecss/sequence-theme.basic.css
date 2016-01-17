@@ -1,0 +1,596 @@
+@charset "UTF-8";
+
+
+
+@import url(http://fonts.googleapis.com/css?family=Roboto:900);
+
+body,
+html,
+/*.seq {
+  
+  width: 100%;
+  max-width: 100% !important;
+  height: 100% !important; *//*
+  max-height: 100% !important;
+}*/
+
+/* Google Web Font */
+
+.seq {
+  position: relative;
+  
+  width: 100%;
+  height: 90%;
+  max-width: 100%;
+  
+  margin: 0 auto;
+  padding: 0;
+  
+  font-family: sans-serif;
+}
+
+.seq .seq-pagination,
+.seq .seq-screen,
+.seq .seq-canvas,
+.seq .seq-canvas > * {
+  /* Reset the canvas and steps for better browser consistency */
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.seq .seq-preloader {
+  background: #FFF;
+}
+
+.seq .seq-pagination {
+  position: absolute;
+  z-index: 10;
+  bottom: 20px;
+  width: 100%;
+  border: none;
+  text-align: center;
+}
+
+.seq .seq-pagination a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.seq .seq-pagination .seq-current {
+  border-radius: 100%;
+}
+
+.seq .seq-pagination > * {
+  margin: 0 4px;
+  padding: 0;
+  display: inline-block;
+  zoom: 1;
+  width: 28px;
+  height: 28px;
+  cursor: pointer;
+  background: none;
+  border: white solid 2px;
+  -webkit-transition-duration: .1s;
+  transition-duration: .1s;
+  -webkit-transition-property: background-color, border-radius;
+  transition-property: background-color, border-radius;
+  /* Image replacement */
+  font: 0/0 a;
+  text-shadow: none;
+  color: transparent;
+}
+
+.seq .seq-pagination > *:nth-child(1):focus,
+.seq .seq-pagination > *:nth-child(1):hover {
+  background-color: #fff;
+}
+
+.seq .seq-pagination > *:nth-child(2):focus,
+.seq .seq-pagination > *:nth-child(2):hover {
+  background-color: #fff;
+}
+
+.seq .seq-pagination > *:nth-child(3):focus,
+.seq .seq-pagination > *:nth-child(3):hover {
+  background-color: #fff;
+}
+
+.seq .seq-canvas {
+  /* Make the canvas the same dimensions as the container and prevent lines
+   * from wrapping so each step can sit side-by-side */
+  position: absolute;
+  height: 103%;
+  width: 100%;
+  white-space: nowrap;
+  /* Reset the font-size to remove 4px from :before and .title */
+  font-size: 0;
+}
+
+.seq .seq-canvas > * {
+  /* Make the steps the same size as the container and sit side-by-side */
+  display: inline-block;
+  zoom: 1;
+  vertical-align: top;
+  width: 100%;
+  height: 100%;
+  white-space: normal;
+  text-align: center;
+  color: white;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+}
+
+.seq .seq-canvas > *:before {
+  /* Vertically align .seq-content */
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  height: 100%;
+}
+
+.seq .seq-content {
+  /* Default styles for content */
+  display: inline-block;
+  vertical-align: middle;
+  max-width: 720px;
+  margin: 0 4%;
+  /* Reset the font-size from 0 back to 16 */
+  font-size: 16px;
+}
+
+.seq .seq-button {
+  display: inline-block;
+  zoom: 1;
+  margin-top: 2em;
+  padding: .6em;
+  color: white;
+  border: white solid 2px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: 'Roboto', sans-serif;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-transition-duration: .25s;
+  transition-duration: .25s;
+  -webkit-transition-property: background-color, color;
+  transition-property: background-color, color;
+}
+
+.seq .seq-button:focus,
+.seq .seq-button:hover {
+  background-color: white;
+}
+
+.seq .seq-step1 {
+  background-image: url("homeimage.jpg");
+  -webkit-background-size: 100% 100%;
+  -moz-background-size: 100% 100%;
+  -o-background-size: 100% 100%;
+  background-size: 100% 100%;
+  overflow-y: hidden;
+   
+}
+
+.seq .seq-step1 .seq-button:focus,
+.seq .seq-step1 .seq-button:hover {
+  color: #279FE5;
+}
+
+.seq .seq-step2 {
+  background-image: url("tedtalk.jpg");
+    -webkit-background-size: 100% 100%;
+  -moz-background-size: 100% 100%;
+  -o-background-size: 100% 100%;
+  background-size: 100% 100%;
+   
+}
+
+.seq .seq-step2 .seq-button:focus,
+.seq .seq-step2 .seq-button:hover {
+  color: #F96852;
+}
+
+.seq .seq-step3 {
+  background-image: url("tedtalk.jpg");
+    -webkit-background-size: 100% 100%;
+  -moz-background-size: 100% 100%;
+  -o-background-size: 100% 100%;
+  background-size: 100% 100%;
+   
+}
+
+.seq .seq-step3 .seq-button:focus,
+.seq .seq-step3 .seq-button:hover {
+  color: #2BBF8E;
+}
+
+.seq .seq-title,
+.seq .seq-subtitle,
+.seq .seq-button {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+}
+
+.seq .seq-title,
+.seq .seq-subtitle {
+  margin: 0 0 .5em 0;
+  display: block;
+  line-height: 1.4;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+}
+
+.seq .seq-title {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.8em;
+}
+
+.seq.seq-active {
+  /* when JS is enabled */
+  /* Hide anything that goes beyond the boundaries of the Sequence container */
+  overflow: hidden;
+}
+
+.seq.seq-active .seq-preloader,
+.seq.seq-active .seq-pagination {
+  visibility: visible;
+}
+
+.seq.seq-active .seq-preloader.seq-preloaded {
+  visibility: hidden;
+}
+
+.seq.seq-active .seq-preloader .seq-preload-circle {
+  fill: white;
+}
+
+.seq.seq-active .seq-content {
+  /* Pull the content up a bit to account for the pagination */
+  margin-top: -26px;
+}
+
+.seq.seq-active .seq-button {
+  -webkit-transform: translateZ(0) scale(0);
+  -ms-transform: translateZ(0) scale(0);
+  transform: translateZ(0) scale(0);
+}
+
+@-webkit-keyframes jelly {
+  0% {
+    -webkit-transform: translateZ(0) scale(0);
+    transform: translateZ(0) scale(0);
+  }
+
+  40% {
+    -webkit-transform: translateZ(0) scale(1.15);
+    transform: translateZ(0) scale(1.15);
+  }
+
+  60% {
+    -webkit-transform: translateZ(0) scale(1);
+    transform: translateZ(0) scale(1);
+  }
+
+  80% {
+    -webkit-transform: translateZ(0) scale(1.05);
+    transform: translateZ(0) scale(1.05);
+  }
+
+  100% {
+    -webkit-transform: translateZ(0) scale(1);
+    transform: translateZ(0) scale(1);
+  }
+}
+
+@keyframes jelly {
+  0% {
+    -webkit-transform: translateZ(0) scale(0);
+    -ms-transform: translateZ(0) scale(0);
+    transform: translateZ(0) scale(0);
+  }
+
+  40% {
+    -webkit-transform: translateZ(0) scale(1.15);
+    -ms-transform: translateZ(0) scale(1.15);
+    transform: translateZ(0) scale(1.15);
+  }
+
+  60% {
+    -webkit-transform: translateZ(0) scale(1);
+    -ms-transform: translateZ(0) scale(1);
+    transform: translateZ(0) scale(1);
+  }
+
+  80% {
+    -webkit-transform: translateZ(0) scale(1.05);
+    -ms-transform: translateZ(0) scale(1.05);
+    transform: translateZ(0) scale(1.05);
+  }
+
+  100% {
+    -webkit-transform: translateZ(0) scale(1);
+    -ms-transform: translateZ(0) scale(1);
+    transform: translateZ(0) scale(1);
+  }
+}
+
+.seq.seq-active .seq-title,
+.seq.seq-active .seq-subtitle {
+  /* Starting positions */
+  opacity: 0;
+  -webkit-transition-duration: .4s;
+  transition-duration: .4s;
+}
+
+.seq.seq-active .seq-title {
+  -webkit-transform: translate3d(0, -20px, 0);
+  -ms-transform: translate3d(0, -20px, 0);
+  transform: translate3d(0, -20px, 0);
+}
+
+.seq.seq-active h3 {
+  -webkit-transform: translate3d(0, 20px, 0);
+  -ms-transform: translate3d(0, 20px, 0);
+  transform: translate3d(0, 20px, 0);
+}
+
+.seq .seq-in {
+  /* Animate in positions for content */
+}
+
+.seq .seq-in .seq-title,
+.seq .seq-in .seq-subtitle {
+  opacity: 1;
+  -webkit-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+.seq .seq-in .seq-button {
+  -webkit-animation-name: jelly;
+  animation-name: jelly;
+  -webkit-animation-duration: .5s;
+  animation-duration: .5s;
+}
+
+.seq .seq-out {
+  /* Animate out positions for content */
+}
+
+.seq .seq-out .seq-title,
+.seq .seq-out .seq-subtitle {
+  opacity: 1;
+  -webkit-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+.seq .seq-out .seq-button {
+  -webkit-transform: scale(1) translateZ(0);
+  -ms-transform: scale(1) translateZ(0);
+  transform: scale(1) translateZ(0);
+}
+
+@media only screen and (min-width: 600px) {
+  .seq {
+    /* Make the container 16:9 but no bigger than 90% of the screen height */
+    position: relative;
+    height: auto;
+    height: 100%;
+    max-height: 90vh;
+    min-height: 561px;
+  }
+
+  .seq:before {
+    /* Make an element a certain aspect ratio */
+    display: block;
+    content: "";
+    width: 100%;
+    padding-top: 0%;
+  }
+
+  .seq .seq-screen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  .seq .seq-content {
+    /* Pull the content up to account for the pagination */
+    margin-top: -19px;
+  }
+
+  .seq .seq-pagination > * {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .seq .seq-title,
+  .seq .seq-subtitle {
+    font-size: 1.4em;
+  }
+
+  .seq .seq-title {
+    font-size: 2.6em;
+  }
+}
+
+
+
+
+
+.btn{
+  padding: 20px 40px 20px 40px;
+  margin: 10px auto;
+  color: white;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-family: "AndaleMono", "droid-sans-mono", Impact, Arial, sans;
+  font-style: normal;
+  font-size: 1.2em;
+  letter-spacing: .15em;
+  display: inline-block;
+  position: relative;
+  white-space: no-wrap;
+  margin: 10px auto 20px;
+  overflow: hidden;
+  line-height: 1.2;
+  max-width: 95%;
+}
+@media (min-width: 430px) {
+
+  .btn, .block {
+    max-width: 100%;
+  }
+}
+
+.btn .txt, .block .txt {
+  position: relative;
+  color: #fff;
+}
+
+a.btn .b {
+  -moz-transition-timing-function: ease-out;
+  -o-transition-timing-function: ease-out;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+
+a.btn .b.bl, a.btn .b.br {
+  -moz-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  -moz-transition-property: height;
+  -o-transition-property: height;
+  -webkit-transition-property: height;
+  transition-property: height;
+}
+
+a.btn .b.bt, a.btn .b.bb {
+  -moz-transition-duration: 0.75s;
+  -o-transition-duration: 0.75s;
+  -webkit-transition-duration: 0.75s;
+  transition-duration: 0.75s;
+  -moz-transition-property: width;
+  -o-transition-property: width;
+  -webkit-transition-property: width;
+  transition-property: width;
+}
+
+a.btn:hover {
+  text-decoration: none;
+}
+
+a.btn:hover .b.bl, a.btn:hover .b.br {
+  height: 0%;
+}
+
+a.btn:hover .b.bt, a.btn:hover .b.bb {
+  width: 0%;
+}
+
+
+a.coverLink:hover a.btn .b.bl, a.coverLink:hover a.btn .b.br {
+  height: 0%;
+}
+
+a.coverLink:hover a.btn .b.bt, a.coverLink:hover a.btn .b.bb {
+  width: 0%;
+}
+
+
+._animating a.btn .b, a._animating.btn .b {
+  -moz-transition: none;
+  -o-transition: none;
+  -webkit-transition: none;
+  transition: none;
+}
+
+
+.b {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  background: #000;
+}
+
+.b.bl, .b.br {
+  width: 1.5px;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+}
+
+.b.bt, .b.bb {
+  width: 100%;
+  height: 1px;
+}
+
+.b.bb {
+  top: auto;
+  bottom: 0px;
+  left: auto;
+  right: 0px;
+}
+
+.b.br {
+  left: auto;
+  right: 0px;
+  top: auto;
+  bottom: 0px;
+}
+
+.b.br.gap {
+  right: 10px;
+  bottom: auto;
+  top: 0px;
+}
+
+.b.bl.gap {
+  left: 10px;
+  top: auto;
+  bottom: 0px;
+}
+
+.b.cross {
+  width: 50%;
+  height: 1px;
+  margin-top: 50%;
+  left: 50%;
+  margin-left: -25%;
+}
+
+.b.cross.v {
+  height: 50%;
+  width: 1px;
+  top: 50%;
+  margin-top: -25%;
+  left: auto;
+  right: 50%;
+}
+
+.botnav {
+background-color:#E0E0E0;
+width:100%;
+height:40%;
+}
+.botnav > .botnav1{
+float:left;
+width:33%;
+height:100%;
+border-style:solid;
+border-color:#CACACA;
+}
+
