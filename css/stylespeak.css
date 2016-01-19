@@ -62,7 +62,7 @@ h2.ss-subtitle:after{
     text-align: left;
     float: left;
 	overflow: hidden;
-	padding-bottom: 130px;
+	padding-bottom: 100px;
 }
 .ss-container h2{
     font-size: 40px;
@@ -226,3 +226,7 @@ h2.ss-subtitle:after{
 .ss-circle-5{
     background-image: url(../images/speak/h.jpg);
 }
+.ss-circle-6{
+    background-image: url(../images/speak/ra.jpg);
+}
+
