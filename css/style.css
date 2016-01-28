@@ -2050,6 +2050,7 @@ background: url(../images/social.png) no-repeat 0px 0px;
 		margin-top: 1em;
 	}
 	.top-navigation {
+		z-index:1;
 	     display: block;
 		padding: 20px;
 		cursor: pointer;
